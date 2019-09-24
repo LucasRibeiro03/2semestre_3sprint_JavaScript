@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+    <title>Exercícios</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        let personagens = [{
+            nome: "Capitão Cometa",
+            dataAparicao: 1951,
+            editora: "DC"
+        }, {
+            nome: "Lanterna Verde",
+            dataAparicao: 1940,
+            editora: "DC"
+        }, {
+            nome: "Ciborgue",
+            dataAparicao: 1980,
+            editora: "DC"
+        }, {
+            nome: "Homem Aranha",
+            dataAparicao: 1962,
+            editora: "Marvel"
+        }, {
+            nome: "Homem de Ferro",
+            dataAparicao: 1963,
+            editora: "Marvel"
+        }, {
+            nome: "Capitão América",
+            dataAparicao: 1940,
+            editora: "Marvel"
+        }];
+
+        
+
+        console.log("Marvetes");
+
+        let FiltroMarvel = personagens.filter(x => x.editora == "Marvel" );
+        console.log(FiltroMarvel);
+
+        console.log("--------------------");
+        console.log("Anos 50");
+
+        let filterAnos50 = personagens.filter(x => x.dataAparicao >= 1950);
+        console.log(filterAnos50);
+
+        console.log("--------------------");
+
+         let NomesBuscados = personagens.map(x => x.nome);
+
+         console.log("nome personagens");
+         
+         console.log(NomesBuscados);
+         
+         console.log("-------------------");
+
+        personagens.push({
+            nome: "Capitã Marvel",
+            dataAparicao: 1977,
+            editora: "Marvel"
+        })
+
+        console.log(" personagens add");
+        console.log(personagens);
+        console.log("-------------------");
+
+
+
+
+    </script>
+
+</body>
+
+</html>

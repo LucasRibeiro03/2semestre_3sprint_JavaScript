@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<head>
+
+    <title>Exercícios</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<script>
+
+	let pets = [{
+            nome: "Doguinho A",
+            idade: 4,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Doguinho B",
+            idade: 5,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Doguinho C",
+            idade: 11,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Gatinho A",
+            idade: 17,
+            tipoPet: "gato"
+        }, {
+            nome: "Gatinho H",
+            idade: 2,
+            tipoPet: "gato"
+        }, {
+            nome: "Passarinho A",
+            idade: 12,
+            tipoPet: "pássaro"
+        }, {
+            nome: "Doguinho Z",
+            idade: 16,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Doguinho H",
+            idade: 4,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Gatinho P",
+            idade: 3,
+            tipoPet: "gato"
+        }];
+
+
+        console.log("Apenas os Cachorros:");
+        for(let i; i < pets.length; i++ ){
+	    if(pets[i].tipoPet === "cachorro"){
+            console.log(pets[i]);
+        }
+            }   
+            for (let i = 0; i < pets.length; i++) {
+                const element = pets[i]
+                if(pets[i].tipoPet === "cachorro"){
+                console.log(pets[i]);
+            }
+        }
+        console.log("---------------------");
+
+        
+        console.log("Apenas com mais de 7 anos:");
+
+        
+        for (let i = 0; i < pets.length; i++) {
+            const element = pets[i];
+            if(pets[i].idade >= 7){
+                console.log(pets[i]);
+            }
+        }
+        console.log("-----------------------");
+
+
+        console.log("Apenas os nomes de todos os animais");
+        let y = pets.map(element =>{
+            return element.nome
+        });
+        console.log(y);
+
+        console.log("-----------------------");
+        console.log("Adicionar um novo animal:");
+        console.log(pets);
+        pets.push({nome:"Doginho",idade:13,tipoPet:"cachorro"});
+        console.log(pets);
+        console.log("-----------------------");
+
+        console.log("Apenas os Cachorros:");
+        for(let i; i < pets.length; i++ ){
+	    if(pets[i].tipoPet === "cachorro"){
+            console.log(pets[i]);
+        }
+            }   
+            for (let i = 0; i < pets.length; i++) {
+                const element = pets[i]
+                if(pets[i].tipoPet === "cachorro"){
+                console.log(pets[i]);
+            }
+        }
+        console.log("---------------------");
+
+
+
+        let idades = pets.map(x => x.idade);
+        console.log('IDADES\n')
+        let soma = idades.reduce((total, element) => {
+            
+            return Number(total) + Number(element);
+        });
+        console.log(soma)
+
+</script>
+
+<body>
+
+</body>
+
+</html>
